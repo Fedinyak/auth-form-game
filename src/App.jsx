@@ -1,15 +1,71 @@
 // import { useState } from "react";
-import React, { useRef, useEffect, useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import React, { useState } from "react";
+// import reactLogo from "./assets/react.svg";
+// import viteLogo from "/vite.svg";
 import "./App.css";
 import Form from "./components/Form";
+import Cube from "./components/Cube";
+// import Cat from "./components/Cat";
+import FormComponent from "./components/FormComponent";
+import Score from "./components/Score";
 
 function App() {
-  const [count, setCount] = useState(0);
+  // const [count, setCount] = useState(0);
+  const [score, setScore] = useState({ player: 0, cat: 0 });
+  const [isLogin, setIsLogin] = useState(false);
+  const [isCatPushButton, setIsCatPushButton] = useState(false);
+  const [isCatAngry, setIsCatAngry] = useState(false);
+
+  const loginHandle = () => {
+    setIsLogin(true);
+    setIsCatPushButton(false);
+    setIsCatAngry(false);
+  };
+
+  const playerPushButton = () => {
+    setIsCatAngry(true);
+    playerGetScore();
+  };
+
+  const playerGetScore = () => {
+    if (!isCatAngry) {
+      setScore({ player: score.player + 1, cat: score.cat });
+    }
+  };
+
+  const catPushButton = () => {
+    // setScore({ player: score.player + 1, cat: score.cat });
+    setIsLogin(false);
+    setIsCatPushButton(true);
+    // if (!isCatAngry) {
+    //   setScore({ player: score.player, cat: score.cat + 1 });
+    // }
+    console.log(score, "score");
+  };
+
+  const catGetScore = () => {
+    setScore({ player: score.player, cat: score.cat + 1 });
+  };
 
   return (
     <>
+      <Score score={score} />
+      <Cube
+        score={score}
+        catPushButton={catPushButton}
+        isLogin={isLogin}
+        isCatPushButton={isCatPushButton}
+        isCatAngry={isCatAngry}
+        playerPushButton={playerPushButton}
+        setIsLogin={setIsLogin}
+        setIsCatPushButton={setIsCatPushButton}
+        catGetScore={catGetScore}
+      >
+        <FormComponent loginHandle={loginHandle} />
+
+        {/* <Cat setIsLogin={setIsLogin} setIsCatPushButton={setIsCatPushButton} /> */}
+      </Cube>
+
       {/* <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />

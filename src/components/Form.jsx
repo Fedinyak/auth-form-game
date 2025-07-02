@@ -59,44 +59,42 @@ const Form = () => {
   };
 
   return (
-    <Cube>
-      <div
-        className={`container ${login ? "flip" : ""} ${
-          logout ? "backflip" : ""
-        } ${angryCat ? "angry" : ""}`}
-      >
-        <div className="form-section">
-          <div className="form-container">
-            <div className="form-login-container">
-              <form className="form" onSubmit={handleSubmit}>
-                <label>
-                  Email: <input type="email" autocomplete="username" />
-                </label>
-                <label>
-                  Password:{" "}
-                  <input type="password" autocomplete="current-password" />
-                </label>
-                <button className="form-button-login" onClick={loginHandle}>
-                  Sign Up
-                </button>
-              </form>
-            </div>
-            <div className="form-logout-container">
-              <button
-                className="form-button-logout"
-                onClick={logoutHandle}
-                ref={buttonRef}
-              >
-                Logout
+    <div
+      className={`container ${login ? "flip" : ""} ${
+        logout ? "backflip" : ""
+      } ${angryCat ? "angry" : ""}`}
+    >
+      <div className="form-section">
+        <div className="form-container">
+          <div className="form-login-container">
+            <form className="form" onSubmit={handleSubmit}>
+              <label>
+                Email: <input type="email" autocomplete="username" />
+              </label>
+              <label>
+                Password:{" "}
+                <input type="password" autocomplete="current-password" />
+              </label>
+              <button className="form-button-login" onClick={loginHandle}>
+                Sign Up
               </button>
-            </div>
-            <div className="cap"></div>
-            <div className="cat"></div>
-            <div className="paws" ref={divRef}></div>
+            </form>
           </div>
+          <div className="form-logout-container">
+            <button
+              className="form-button-logout"
+              onClick={logoutHandle}
+              ref={buttonRef}
+            >
+              Logout
+            </button>
+          </div>
+          <div className="cap"></div>
+          <div className="cat"></div>
+          <div className="paw" ref={divRef}></div>
         </div>
       </div>
-    </Cube>
+    </div>
   );
 };
 
