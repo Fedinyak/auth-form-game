@@ -3,10 +3,10 @@ import React, { useState } from "react";
 // import reactLogo from "./assets/react.svg";
 // import viteLogo from "/vite.svg";
 import "./App.css";
-import Form from "./components/Form";
+// import Form from "./components/FormOld";
 import Cube from "./components/Cube";
 // import Cat from "./components/Cat";
-import FormComponent from "./components/FormComponent";
+import Form from "./components/Form";
 import Score from "./components/Score";
 
 function App() {
@@ -34,12 +34,8 @@ function App() {
   };
 
   const catPushButton = () => {
-    // setScore({ player: score.player + 1, cat: score.cat });
     setIsLogin(false);
     setIsCatPushButton(true);
-    // if (!isCatAngry) {
-    //   setScore({ player: score.player, cat: score.cat + 1 });
-    // }
     console.log(score, "score");
   };
 
@@ -61,7 +57,7 @@ function App() {
         setIsCatPushButton={setIsCatPushButton}
         catGetScore={catGetScore}
       >
-        <FormComponent loginHandle={loginHandle} />
+        <Form loginHandle={loginHandle} />
 
         {/* <Cat setIsLogin={setIsLogin} setIsCatPushButton={setIsCatPushButton} /> */}
       </Cube>
@@ -87,7 +83,7 @@ function App() {
         Click on the Vite and React logos to learn more
       </p> */}
 
-      <Form />
+      {/* <Form /> */}
     </>
   );
 }
