@@ -9,6 +9,7 @@ import Cube from "./components/Cube";
 // import Cat from "./components/Cat";
 import Form from "./components/Form";
 import Score from "./components/Score";
+import LanguageSwitchBtn from "./components/LanguageSwitchBtn";
 
 function App() {
   // const [count, setCount] = useState(0);
@@ -62,7 +63,7 @@ function App() {
 
         {/* <Cat setIsLogin={setIsLogin} setIsCatPushButton={setIsCatPushButton} /> */}
       </Cube>
-
+      <LanguageSwitchBtn />
       {/* <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
