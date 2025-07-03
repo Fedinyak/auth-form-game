@@ -1,6 +1,9 @@
 // import { useState, useRef, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 const Form = ({ loginHandle }) => {
+  const { t } = useTranslation();
+
   const handleSubmit = e => {
     e.preventDefault();
     // console.log('Form submitted:', formData);
@@ -9,13 +12,14 @@ const Form = ({ loginHandle }) => {
   return (
     <form className="form" onSubmit={handleSubmit}>
       <label>
-        Email: <input type="email" autoComplete="username" />
+        {t("form.email")}: <input type="email" autoComplete="username" />
       </label>
       <label>
-        Password: <input type="password" autoComplete="current-password" />
+        {t("form.password")}:{" "}
+        <input type="password" autoComplete="current-password" />
       </label>
-      <button className="button-login" onClick={loginHandle}>
-        Sign Up
+      <button className="button button-login" onClick={loginHandle}>
+        {t("form.buttonLogin")}
       </button>
     </form>
   );

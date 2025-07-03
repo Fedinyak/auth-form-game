@@ -335,6 +335,12 @@ body {
   opacity: 1;
 }
 
+.button {
+  width: 12em;
+  font-weight: 700;
+  margin: 240px auto;
+}
+
 .button-logout {
   display: block;
   margin: 240px auto;

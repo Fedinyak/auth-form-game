@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import Cat from "./Cat";
 import classNames from "classnames";
 
@@ -11,6 +12,7 @@ const Cube = ({
   playerPushButton,
   catGetScore,
 }) => {
+  const { t } = useTranslation();
   const cubeClass = classNames("cube", {
     flip: isLogin,
     backflip: isCatPushButton,
@@ -23,8 +25,8 @@ const Cube = ({
         <div className="cube-preserve-3d">
           <div className="cube-front-side">{children}</div>
           <div className="cube-bottom-side ">
-            <button className="button-logout" onClick={playerPushButton}>
-              Logout
+            <button className="button button-logout" onClick={playerPushButton}>
+              {t("form.buttonLogout")}
             </button>
           </div>
           <Cat
