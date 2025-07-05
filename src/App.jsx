@@ -47,23 +47,28 @@ function App() {
 
   return (
     <>
-      <Score score={score} />
-      <Cube
-        score={score}
-        catPushButton={catPushButton}
-        isLogin={isLogin}
-        isCatPushButton={isCatPushButton}
-        isCatAngry={isCatAngry}
-        playerPushButton={playerPushButton}
-        setIsLogin={setIsLogin}
-        setIsCatPushButton={setIsCatPushButton}
-        catGetScore={catGetScore}
-      >
-        <Form loginHandle={loginHandle} />
+      <div className="container">
+        <div className="bg-1"></div>
+        <div className="bg-2"></div>
+        <div className="bg-3"></div>
+        <Score score={score} />
+        <Cube
+          score={score}
+          catPushButton={catPushButton}
+          isLogin={isLogin}
+          isCatPushButton={isCatPushButton}
+          isCatAngry={isCatAngry}
+          playerPushButton={playerPushButton}
+          setIsLogin={setIsLogin}
+          setIsCatPushButton={setIsCatPushButton}
+          catGetScore={catGetScore}
+        >
+          <Form loginHandle={loginHandle} />
 
-        {/* <Cat setIsLogin={setIsLogin} setIsCatPushButton={setIsCatPushButton} /> */}
-      </Cube>
-      <LanguageSwitchBtn />
+          {/* <Cat setIsLogin={setIsLogin} setIsCatPushButton={setIsCatPushButton} /> */}
+        </Cube>
+        <LanguageSwitchBtn />
+      </div>
       {/* <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />

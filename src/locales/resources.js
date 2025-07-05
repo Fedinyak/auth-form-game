@@ -15,7 +15,7 @@ export default {
         email: "Email",
         password: "Password",
         buttonLogin: "Login",
-        buttonLogout: "logout",
+        buttonLogout: "Logout",
       },
     },
   },

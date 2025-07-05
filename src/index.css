@@ -1,4 +1,4 @@
-:root {
+/* :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -65,4 +65,103 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+} */
+
+@font-face {
+  font-family: MartianGrotesk;
+  src: url("./fonts/MartianGrotesk-StdRg.woff2") format("woff2");
+  font-weight: 400; /* normal */
 }
+
+@font-face {
+  font-family: MartianGrotesk;
+  src: url("./fonts/MartianGrotesk-StdBd.woff2") format("woff2");
+  font-weight: 700; /* bold */
+}
+@font-face {
+  font-family: Martian Mono;
+  src: url("./fonts/MartianMono-sWdxBd.woff2") format("woff2");
+  font-weight: 800;
+}
+
+::-moz-focus-inner {
+  padding: 0;
+  border-style: none;
+}
+
+html {
+  height: 100%;
+}
+
+:root {
+  font-family: MartianGrotesk, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* background-color: #242424; */
+  min-height: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --text-color: oklch(28.871% 0.00176 106.8);
+  --cube-color: oklch(80% 0.01 100);
+  --cap-color: oklch(70% 0.01 100);
+  --button-regular: oklch(81.759% 0.177 146.167);
+  --button-hover: oklch(84.721% 0.17807 154.591);
+  --button-active: oklch(88.126% 0.13046 157.514);
+  --button-focus: oklch(81.439% 0.17934 154.046);
+  --background-color: oklch(70.96% 0.13524 288.809);
+  --white: oklch(1 0 0);
+  --black-20: oklch(0% 0 0 / 0.2);
+  --black-30: oklch(0% 0 0 / 0.3);
+  --black-40: oklch(0% 0 0 / 0.4);
+  --pink: oklch(0.749 0.1605 338.96);
+  --blue: oklch(0.6443 0.1606 251.84);
+  --green: oklch(0.8222 0.2462 144.27);
+  --light-green: oklch(0.8412 0.1562 169.87);
+  --transparent: oklch(1 0 0 / 0%);
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  color: var(--text-color);
+}
+
+button {
+  border-radius: 8px;
+  /* border: 1px solid transparent; */
+  border: none;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 700;
+  /* width: 12em; */
+  font-family: inherit;
+  background-color: var(--button-regular);
+  cursor: pointer;
+  transition: border-color 0.25s;
+  -webkit-appearance: button;
+}
+button:hover {
+  background-color: var(--button-hover);
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* a,
+input,
+button,
+select {
+  &:focus {
+    outline: var(--accent) solid 3px;
+  }
+
+  &:not(:focus-visible):focus {
+    outline: none;
+  }
+} */
