@@ -69,7 +69,7 @@
   position: absolute;
   width: 300px;
   height: 300px;
-  background-image: url("./assets/cat.png");
+  background-image: url("../../assets/cat.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -82,12 +82,16 @@
     0px 10px 20px 5px rgba(16, 16, 16, 0.04); */
 }
 
-.angry .cat {
-  background-image: url("./assets/cat-angry.png");
-}
-
 .flip .cat {
   animation: attack-cat 3s ease forwards;
+}
+
+.backflip .cat {
+  animation: hidden-cat 0.1s ease forwards;
+}
+
+.angry .cat {
+  background-image: url("../../assets/cat-angry.png");
 }
 
 @keyframes attack-cat {
@@ -120,10 +124,6 @@
   }
 }
 
-.backflip .cat {
-  animation: hidden-cat 0.1s ease forwards;
-}
-
 @keyframes hidden-cat {
   from {
     opacity: 1;
@@ -146,7 +146,7 @@
   position: absolute;
   width: 90px;
   height: 180px;
-  background-image: url("./assets/paw.png");
+  background-image: url("../../assets/paw.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;

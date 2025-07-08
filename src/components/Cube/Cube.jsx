@@ -19,13 +19,17 @@ const Cube = ({
     angry: isCatAngry,
   });
 
+  const buttonStyles = classNames("button button-logout", {
+    "button-logout-active": isCatPushButton,
+  });
+
   return (
     <div className={cubeClass}>
       <div className="cube-perspective">
         <div className="cube-preserve-3d">
           <div className="cube-front-side">{children}</div>
           <div className="cube-bottom-side ">
-            <button className="button button-logout" onClick={playerPushButton}>
+            <button className={buttonStyles} onClick={playerPushButton}>
               <span className="button-text"> {t("form.buttonLogout")} </span>
             </button>
           </div>
