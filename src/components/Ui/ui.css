@@ -1,0 +1,26 @@
+.language-button-container {
+  display: flex;
+  justify-content: flex-end;
+  background-image: linear-gradient(
+    var(--white) 2%,
+    var(--cube-color-light) 8% 92%,
+    var(--cube-color-dark) 98%
+  );
+}
+
+.button-language {
+  background-image: linear-gradient(
+    var(--white) 2%,
+    var(--cube-color-light) 8% 92%,
+    var(--cube-color-dark) 98%
+  );
+}
+
+.active {
+  /* background-color: var(--light-green); */
+  background-image: linear-gradient(
+    var(--cube-color-dark) 2%,
+    var(--cube-color-light) 8% 92%,
+    var(--white) 98%
+  );
+}

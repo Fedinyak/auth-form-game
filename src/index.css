@@ -66,6 +66,12 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 } */
+@import "./app.css";
+@import "./components/Cat/cat.css";
+@import "./components/Cube/cube.css";
+@import "./components/Form/form.css";
+@import "./components/Score/score.css";
+@import "./components/Ui/ui.css";
 
 @font-face {
   font-family: Martian Mono;
@@ -73,11 +79,6 @@ button:focus-visible {
   font-weight: 400;
 }
 
-/* @font-face {
-  font-family: MartianGrotesk;
-  src: url("./fonts/MartianGrotesk-StdBd.woff2") format("woff2");
-  font-weight: 700; 
-} */
 @font-face {
   font-family: Martian Mono;
   src: url("./fonts/MartianMono-sWdxBd.woff2") format("woff2");
@@ -106,30 +107,31 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+  --background-color: oklch(70.96% 0.13524 288.809);
   --text-color: oklch(0.3316 0.00176 106.8);
+  --text-shadow: oklch(1 0 0 / 50%);
   /* --text-color-dark: oklch(0.4532 0 0); */
-  --cube-color: oklch(0.9 0.00434 15.935);
+  /* --cube-color: oklch(0.9 0.00434 15.935); */
   --cube-color-dark: oklch(0.7921 0 0);
-  --cube-color-medium: oklch(1 0 0 / 50%);
   /* --cube-color-dark: oklch(0.7921 0 0) 0.11turn; */
   --cube-color-light: oklch(90.374% 0.00434 15.935);
   /* --cube-color-light: oklch(0.9491 0 0) 0.31turn 0.36turn; */
   --cap-color-light: oklch(0.7621 0.0069 17.31);
   --cap-color-dark: oklch(0.5736 0.0012 17.19);
-  --button-regular: oklch(0.9 0 146);
-  --button-hover: oklch(0.87 0 146);
-  --button-active: oklch(0.84 0 146);
-  --button-focus: oklch(81.439% 0.17934 154.046);
-  --background-color: oklch(70.96% 0.13524 288.809);
-  --white: oklch(1 0 0);
+  /* --button-regular: oklch(0.9 0 146); */
+  /* --button-hover: oklch(0.87 0 146); */
+  /* --button-active: oklch(0.84 0 146); */
+  /* --button-focus: oklch(81.439% 0.17934 154.046); */
+  --transparent: oklch(1 0 0 / 0%);
   --black-transparent-20: oklch(0% 0 0 / 0.2);
   --black-transparent-30: oklch(0% 0 0 / 0.3);
   --black-transparent-40: oklch(0% 0 0 / 0.4);
+
+  --white: oklch(1 0 0);
   --pink: oklch(0.749 0.1605 338.96);
   --blue: oklch(0.6443 0.1606 251.84);
   --green: oklch(0.8222 0.2462 144.27);
   --light-green: oklch(0.8412 0.1562 169.87);
-  --transparent: oklch(1 0 0 / 0%);
 }
 
 body {
@@ -163,7 +165,7 @@ button {
   font-weight: 700;
   /* width: 12em; */
   font-family: inherit;
-  background-color: var(--button-regular);
+  /* background-color: var(--button-regular); */
   cursor: pointer;
   transition: 0.1s linear;
   -webkit-appearance: button;
@@ -177,7 +179,7 @@ button:hover {
   /* border-radius: 0; */
   /* border: 1px solid var(--black-transparent-20); */
   /* outline-offset: -3px; */
-  background-color: var(--button-hover);
+  /* background-color: var(--button-hover); */
 }
 button:active {
   transition: 0.1s linear;
@@ -227,7 +229,7 @@ label {
   background-color: var(--text-color);
   text-transform: uppercase;
   /* text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.5); */
-  text-shadow: 0px 2px 3px var(--cube-color-medium);
+  text-shadow: 0px 2px 3px var(--text-shadow);
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;

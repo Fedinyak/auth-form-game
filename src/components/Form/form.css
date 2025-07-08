@@ -1,0 +1,65 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  margin: 2em 3em;
+  padding-top: 1rem;
+  font-weight: bold;
+}
+
+.form-input {
+  margin-top: 0.3rem;
+  margin-bottom: 1rem;
+}
+
+.button-login,
+.button-logout {
+  margin-top: 2rem;
+  height: 5rem;
+  font-size: 1.8rem;
+  letter-spacing: 0.1em;
+
+  /* line-height: 0rem; */
+  /* background-image: conic-gradient(
+    from 0.38turn,
+    var(--cube-color-dark) 0.11turn,
+    var(--cube-color-light) 0.31turn 0.36turn,
+    var(--cube-color-dark) 1turn 0.57turn,
+    var(--cube-color-light) 0.86turn
+  ); */
+  background-image: linear-gradient(
+    var(--white) 2%,
+    var(--cube-color-light) 8% 92%,
+    var(--cube-color-dark) 98%
+  );
+  /* background-size: 100% 100%; */
+}
+
+.button-text {
+  /* color: var(--cube-color-dark); */
+  /* position: relative; */
+  /* letter-spacing: 0.1em; */
+  color: transparent;
+  background-color: var(--text-color);
+  text-transform: uppercase;
+  /* pointer-events: none; */
+  /* text-shadow: 0px 2px 20px rgba(255, 255, 255, 0.8); */
+  text-shadow: 0px 2px 20px var(--cube-color-light);
+  /* text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.5); */
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  transition: text-shadow 0.3s ease-out;
+}
+
+/* .button-login:hover .button-text,
+.button-login:focus .button-text,
+.button-login:focus-visible .button-text {
+  text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.5);
+  transition: text-shadow 0.3s ease-out;
+} */
+.button-login:hover .button-text {
+  /* text-shadow: 0px 2px 20px rgba(255, 255, 255, 0.8); */
+  /* text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.5); */
+  text-shadow: 0px 2px 3px var(--text-shadow);
+  transition: text-shadow 0.3s ease-out;
+}

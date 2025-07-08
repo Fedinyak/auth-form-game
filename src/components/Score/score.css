@@ -1,0 +1,52 @@
+.score-container {
+  /* position: relative; */
+  /* font-family: Martian Mono; */
+  margin-top: 0;
+  margin-bottom: 13em;
+  line-height: 14em;
+  color: var(--white);
+}
+
+.score-numbers {
+  position: absolute;
+  font-size: 15em;
+  font-weight: 800;
+  text-shadow: 1px 1px 10px var(--black-transparent-20);
+  /* margin-top: 0; */
+  /* left: -50%; */
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  width: fit-content;
+
+  user-select: none;
+  animation: roll 0.4s;
+}
+
+.score-player {
+  left: -22.7rem;
+}
+
+.score-cat {
+  right: -21.5rem;
+}
+
+.score-semicolon {
+  top: -1.2rem;
+}
+
+@keyframes roll {
+  0% {
+    /* transform: translateY(-100px); */
+    transform-origin: center top;
+    transform: perspective(75em) rotateX(90deg);
+  }
+  100% {
+    transform: none;
+  }
+}

@@ -3,13 +3,13 @@ import { useState } from "react";
 
 // import reactLogo from "./assets/react.svg";
 // import viteLogo from "/vite.svg";
-import "./App.css";
+// import "./App.css";
 // import Form from "./components/FormOld";
-import Cube from "./components/Cube";
+import Cube from "./components/Cube/Cube";
 // import Cat from "./components/Cat";
-import Form from "./components/Form";
-import Score from "./components/Score";
-import LanguageSwitchBtn from "./components/LanguageSwitchBtn";
+import Form from "./components/Form/Form";
+import Score from "./components/Score/Score";
+import LanguageSwitchBtn from "./components/Ui/LanguageSwitchBtn";
 
 function App() {
   // const [count, setCount] = useState(0);

@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import Cat from "./Cat";
+import Cat from "../Cat/Cat";
 import classNames from "classnames";
 
 const Cube = ({
