@@ -1,18 +1,15 @@
 const Score = ({ score }) => {
+  const ShowScore = score.player === 0 && score.cat === 0;
+
   return (
     <div className="score-container">
-      {score.player === 0 && score.cat === 0 ? (
-        ""
-      ) : (
-        // <p className="score-numbers">
-        //   {score.player}:{score.cat}
-        // </p>
+      {ShowScore || (
         <>
-          <p className="score-numbers score-player" key={score.player + "-p"}>
+          <p className="score-numbers score-player" key={`${score.player}-p`}>
             {score.player}
           </p>
           <p className="score-numbers score-semicolon">:</p>
-          <p className="score-numbers score-cat" key={score.cat + "-c"}>
+          <p className="score-numbers score-cat" key={`${score.cat}-c`}>
             {score.cat}
           </p>
         </>
