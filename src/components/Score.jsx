@@ -8,11 +8,11 @@ const Score = ({ score }) => {
         //   {score.player}:{score.cat}
         // </p>
         <>
-          <p className="score-numbers" key={score.player + "-p"}>
+          <p className="score-numbers score-player" key={score.player + "-p"}>
             {score.player}
           </p>
-          <p className="score-numbers">:</p>
-          <p className="score-numbers" key={score.cat + "-c"}>
+          <p className="score-numbers score-semicolon">:</p>
+          <p className="score-numbers score-cat" key={score.cat + "-c"}>
             {score.cat}
           </p>
         </>

@@ -29,9 +29,16 @@ function App() {
     playerGetScore();
   };
 
+  const calculateScore = num => {
+    if (num >= 9 || num === "∞") {
+      return "∞";
+    }
+    return num + 1;
+  };
+
   const playerGetScore = () => {
     if (!isCatAngry) {
-      setScore({ player: score.player + 1, cat: score.cat });
+      setScore({ player: calculateScore(score.player), cat: score.cat });
     }
   };
 
@@ -42,7 +49,7 @@ function App() {
   };
 
   const catGetScore = () => {
-    setScore({ player: score.player, cat: score.cat + 1 });
+    setScore({ player: score.player, cat: calculateScore(score.cat) });
   };
 
   return (
@@ -64,10 +71,10 @@ function App() {
           catGetScore={catGetScore}
         >
           <Form loginHandle={loginHandle} />
+          <LanguageSwitchBtn />
 
           {/* <Cat setIsLogin={setIsLogin} setIsCatPushButton={setIsCatPushButton} /> */}
         </Cube>
-        <LanguageSwitchBtn />
       </div>
       {/* <div>
         <a href="https://vite.dev" target="_blank">
@@ -89,8 +96,6 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p> */}
-
-      {/* <Form /> */}
     </>
   );
 }

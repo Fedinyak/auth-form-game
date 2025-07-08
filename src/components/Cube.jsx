@@ -26,7 +26,7 @@ const Cube = ({
           <div className="cube-front-side">{children}</div>
           <div className="cube-bottom-side ">
             <button className="button button-logout" onClick={playerPushButton}>
-              {t("form.buttonLogout")}
+              <span className="button-text"> {t("form.buttonLogout")} </span>
             </button>
           </div>
           <Cat

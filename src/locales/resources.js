@@ -4,8 +4,8 @@ export default {
       form: {
         email: "Почта",
         password: "Пароль",
-        buttonLogin: "Залогиниться",
-        buttonLogout: "Разлогиниться",
+        buttonLogin: "Войти",
+        buttonLogout: "Выйти",
       },
     },
   },
