@@ -9,19 +9,15 @@
 
 .score-numbers {
   position: absolute;
+  font-variant-numeric: tabular-nums;
   font-size: 15em;
   font-weight: 800;
-  text-shadow: 1px 1px 10px var(--black-transparent-20);
-  /* margin-top: 0; */
-  /* left: -50%; */
-  left: 0;
-  right: 0;
-  margin: 0 auto;
 
-  position: absolute;
+  text-shadow: 1px 1px 10px var(--black-transparent-20);
+  margin: 0 auto;
+  margin-inline: auto;
   left: 0;
   right: 0;
-  margin-inline: auto;
   width: fit-content;
 
   user-select: none;
