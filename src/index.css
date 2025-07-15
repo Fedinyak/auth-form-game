@@ -127,13 +127,24 @@ html {
   --black-transparent-30: oklch(0% 0 0 / 0.3);
   --black-transparent-40: oklch(0% 0 0 / 0.4);
 
-  --grey-dark: oklch(0.4732 0.00176 106.8);
+  /* --grey-dark: oklch(0.4732 0.00176 106.8); */
+  --grey-dark: oklch(0.8 0.00176 106.8);
   --white: oklch(1 0 0);
   --pink: oklch(0.749 0.1605 338.96);
   --pink-dark: oklch(0.97 0.03 336.84);
   --blue: oklch(0.6443 0.1606 251.84);
   --green: oklch(0.8222 0.2462 144.27);
   --light-green: oklch(0.8412 0.1562 169.87);
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
 
 body {
@@ -172,7 +183,7 @@ button {
   transition: 0.1s linear;
   -webkit-appearance: button;
 }
-button:hover {
+button:hover:enabled {
   /* outline: 5px solid #fb0; */
   box-shadow: inset 0 1px 2px 2px var(--black-transparent-40);
   transition: 0.1s linear;
@@ -183,7 +194,7 @@ button:hover {
   /* outline-offset: -3px; */
   /* background-color: var(--button-hover); */
 }
-button:active {
+button:active:enabled {
   transition: 0.1s linear;
   box-sizing: border-box;
   /* border: 1px solid var(--black-transparent-20); */
@@ -198,13 +209,17 @@ button:active {
   box-shadow: inset 0 1px 2px 3px var(--black-transparent-40);
   background-color: var(--button-active);
 }
-button:focus,
-button:focus-visible,
+button:focus:enabled,
+button:focus-visible:enabled,
 input:focus,
 input:focus-visible {
   /* border: 4px auto var(--black-transparent-20); */
   /* box-shadow: inset 0 1px 2px 2px var(--black-transparent-20); */
   outline: var(--blue) solid 3px;
+}
+
+button:disabled {
+  cursor: default;
 }
 
 .form {

@@ -9,6 +9,10 @@ export default {
         errorValidEmail: "Введите правильный адрес почты",
         errorRequired: "Обязательное поле",
       },
+      score: {
+        player: "Счет пользователя",
+        cat: "Счет кота",
+      },
     },
   },
   en: {
@@ -20,6 +24,10 @@ export default {
         buttonLogout: "Logout",
         errorValidEmail: "Enter a valid email address",
         errorRequired: "Required field",
+      },
+      score: {
+        player: "Player score",
+        cat: "Cat score",
       },
     },
   },

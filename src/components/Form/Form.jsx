@@ -181,12 +181,14 @@ const Form = ({ loginHandle }) => {
         isInvalid={passwordError}
       >
         <button
-          className="button-show-password"
+          className="button button-show-password"
           type="button"
           aria-label="Show password"
           onClick={showPassword}
         >
-          <div className="eye-icon">{isPasswordShow ? "⦿" : "˘"}</div>
+          <div className="eye-icon">{isPasswordShow ? "o_o" : "-_-"}</div>
+          {/* <div className="eye-icon">{isPasswordShow ? "°_°" : "˘_˘"}</div> */}
+          {/* <div className="eye-icon">{isPasswordShow ? "⦿" : "˘"}</div> */}
           {/* {isPasswordShow ? (
             <div className="eye-icon">⦿</div>
           ) : (

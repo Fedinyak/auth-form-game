@@ -41,7 +41,8 @@
   /* background-size: 100% 100%; */
 }
 
-.button-text {
+.button-text,
+.eye-icon {
   /* color: var(--cube-color-dark); */
   /* position: relative; */
   /* letter-spacing: 0.1em; */
@@ -64,8 +65,8 @@
   text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.5);
   transition: text-shadow 0.3s ease-out;
 } */
-.button-login:hover .button-text,
-.button-logout:hover .button-text {
+.button-login:hover:enabled .button-text,
+.button-logout:hover:enabled .button-text {
   /* text-shadow: 0px 2px 20px rgba(255, 255, 255, 0.8); */
   /* text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.5); */
   text-shadow: 0px 2px 3px var(--text-shadow);
@@ -76,7 +77,8 @@
   position: absolute;
   /* background: none; */
   /* box-shadow: none; */
-  width: 1.5rem;
+  /* width: 1.5rem; */
+  width: 3rem;
   height: 2.4rem;
   /* right: 49px; */
   /* bottom: 201px; */
@@ -88,6 +90,18 @@
     var(--cube-color-light) 8% 92%,
     var(--cube-color-dark) 98%
   );
+}
+
+.eye-icon {
+  color: transparent;
+  /* background-color: #3a3939; */
+  background-color: var(--text-color);
+  text-transform: uppercase;
+  /* text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.5); */
+  text-shadow: 0px 2px 3px var(--text-shadow);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
 }
 
 .error-messages {

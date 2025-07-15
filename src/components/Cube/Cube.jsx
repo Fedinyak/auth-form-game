@@ -29,7 +29,11 @@ const Cube = ({
         <div className="cube-preserve-3d">
           <div className="cube-front-side">{children}</div>
           <div className="cube-bottom-side ">
-            <button className={buttonStyles} onClick={playerPushButton}>
+            <button
+              className={buttonStyles}
+              onClick={playerPushButton}
+              disabled={!isLogin}
+            >
               <span className="button-text"> {t("form.buttonLogout")} </span>
             </button>
           </div>
