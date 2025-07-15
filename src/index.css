@@ -130,6 +130,7 @@ html {
   --grey-dark: oklch(0.4732 0.00176 106.8);
   --white: oklch(1 0 0);
   --pink: oklch(0.749 0.1605 338.96);
+  --pink-dark: oklch(0.97 0.03 336.84);
   --blue: oklch(0.6443 0.1606 251.84);
   --green: oklch(0.8222 0.2462 144.27);
   --light-green: oklch(0.8412 0.1562 169.87);
@@ -229,6 +230,7 @@ label::selection {
 }
 
 label {
+  position: relative;
   color: transparent;
   letter-spacing: 0.1em;
   /* background-color: #3a3939; */
@@ -254,3 +256,12 @@ select {
     outline: none;
   }
 } */
+
+#error {
+  width: 100%;
+  font-size: 80%;
+  color: white;
+  background-color: #900;
+  border-radius: 0 0 5px 5px;
+  box-sizing: border-box;
+}

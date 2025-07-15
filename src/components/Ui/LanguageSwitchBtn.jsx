@@ -19,10 +19,18 @@ const LanguageSwitchBtn = () => {
 
   return (
     <div className="language-button-container">
-      <button className={buttonClassEn} onClick={() => handleChange("en")}>
+      <button
+        className={buttonClassEn}
+        onClick={() => handleChange("en")}
+        disabled={getLang === "en"}
+      >
         <span className="button-text">en</span>
       </button>
-      <button className={buttonClassRu} onClick={() => handleChange("ru")}>
+      <button
+        className={buttonClassRu}
+        onClick={() => handleChange("ru")}
+        disabled={getLang === "ru"}
+      >
         <span className="button-text">ru</span>
       </button>
     </div>
