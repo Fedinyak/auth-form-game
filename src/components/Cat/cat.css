@@ -19,7 +19,7 @@
   );
   background-size: 2% 2%;
   /* transform: rotateX(90deg) translateZ(200px); */
-  transform: rotateX(90deg) rotateY(0deg) translateZ(200px);
+  /* transform: rotateX(90deg) rotateY(0deg) translateZ(200px); */
   opacity: 0;
 }
 
