@@ -15,6 +15,10 @@ export default {
         player: "Счет пользователя",
         cat: "Счет кота",
       },
+      switchLanguage: {
+        toEn: "Переключить на Английский язык",
+        toRu: "Переключить на Русский язык",
+      },
     },
   },
   en: {
@@ -32,6 +36,10 @@ export default {
       score: {
         player: "Player score",
         cat: "Cat score",
+      },
+      switchLanguage: {
+        toEn: "Switch to English",
+        toRu: "Switch to Russian",
       },
     },
   },
