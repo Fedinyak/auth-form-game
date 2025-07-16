@@ -4,6 +4,8 @@ export default {
       form: {
         email: "Почта",
         password: "Пароль",
+        hidePassword: "Скрыть пароль",
+        showPassword: "Показать пароль",
         buttonLogin: "Войти",
         buttonLogout: "Выйти",
         errorValidEmail: "Введите правильный адрес почты",
@@ -20,6 +22,8 @@ export default {
       form: {
         email: "Email",
         password: "Password",
+        hidePassword: "Hide password",
+        showPassword: "Show password",
         buttonLogin: "Login",
         buttonLogout: "Logout",
         errorValidEmail: "Enter a valid email address",

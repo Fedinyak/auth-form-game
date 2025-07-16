@@ -103,7 +103,23 @@ const Form = ({ loginHandle }) => {
           aria-label="Show password"
           onClick={showPassword}
         >
-          <div className="eye-icon">{isPasswordShow ? "o_o" : "-_-"}</div>
+          <div className="eye-icon">
+            {isPasswordShow ? (
+              <>
+                <span className="visually-hidden">
+                  {t("form.hidePassword")}
+                </span>
+                <span>o_o</span>
+              </>
+            ) : (
+              <>
+                <span className="visually-hidden">
+                  {t("form.showPassword")}
+                </span>
+                <span>-_-</span>
+              </>
+            )}
+          </div>
           {/* <div className="eye-icon">{isPasswordShow ? "°_°" : "˘_˘"}</div> */}
           {/* <div className="eye-icon">{isPasswordShow ? "⦿" : "˘"}</div> */}
           {/* <div class="eye-icon">⏝⌽⌣⦿◉●</div> */}
