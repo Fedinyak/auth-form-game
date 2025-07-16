@@ -3,13 +3,13 @@ import { useTranslation } from "react-i18next";
 
 const Input = ({
   children,
-  type,
+  inputType,
   value,
   onChange,
   onBlur,
   placeholder,
   autoComplete,
-  fieldType,
+  type,
   isAutoFocus,
   isInvalid,
 }) => {
@@ -20,20 +20,20 @@ const Input = ({
   });
 
   return (
-    <label className={`${fieldType}-label`} htmlFor={fieldType}>
-      {t(`form.${fieldType}`)}
+    <label className={`${type}-label`} htmlFor={type}>
+      {t(`form.${type}`)}
       <input
         placeholder={placeholder}
-        name={fieldType}
-        id={fieldType}
+        name={type}
+        id={type}
         className={inputStyle}
-        type={type}
+        type={inputType}
         autoComplete={autoComplete}
         onChange={onChange}
         onBlur={onBlur}
         value={value}
         aria-invalid="true"
-        aria-errormessage={`${fieldType}-error`}
+        aria-errormessage={`${type}-error`}
         autoFocus={isAutoFocus}
       />
       {children}

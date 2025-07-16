@@ -34,13 +34,16 @@ const Form = ({ loginHandle }) => {
 
   const handleSubmit = e => {
     e.preventDefault();
+    setIsSubmitting(true);
 
     if (isFieldEmpty(email)) {
       setEmailError(t("form.errorRequired"));
       console.log("email empty");
+      setIsSubmitting(false);
     }
     if (isFieldEmpty(password)) {
       setPasswordError(t("form.errorRequired"));
+      setIsSubmitting(false);
       console.log("password empty");
     }
     if (!isFieldEmpty(email) && !isFieldEmpty(password)) {
@@ -57,12 +60,12 @@ const Form = ({ loginHandle }) => {
   };
 
   const handleEmailChange = e => {
-    setEmail(e.target.value);
+    setEmail(e.target.value.trim());
     setEmailError("");
   };
 
   const handlePasswordChange = e => {
-    setPassword(e.target.value);
+    setPassword(e.target.value.trim());
     setPasswordError("");
   };
 
@@ -77,13 +80,13 @@ const Form = ({ loginHandle }) => {
         onChange={handleEmailChange}
         onBlur={validateEmail}
         placeholder="example@gmail.com"
-        fieldType="email"
-        autoComplete="email"
         type="email"
+        autoComplete="email"
+        inputType="email"
         isAutoFocus={true}
         isInvalid={emailError}
       >
-        {emailError && <ErrorMessage error={emailError} fieldType={"email"} />}
+        {emailError && <ErrorMessage error={emailError} type={"email"} />}
       </Input>
 
       <Input
@@ -91,9 +94,9 @@ const Form = ({ loginHandle }) => {
         onChange={handlePasswordChange}
         onBlur={null}
         placeholder={null}
-        fieldType="password"
+        type="password"
         autoComplete="current-password"
-        type={isPasswordShow ? "text" : "password"}
+        inputType={isPasswordShow ? "text" : "password"}
         isAutoFocus={false}
         isInvalid={passwordError}
       >
@@ -125,7 +128,7 @@ const Form = ({ loginHandle }) => {
           {/* <div class="eye-icon">⏝⌽⌣⦿◉●</div> */}
         </button>
         {passwordError && (
-          <ErrorMessage error={passwordError} fieldType={"password"} />
+          <ErrorMessage error={passwordError} type={"password"} />
         )}
       </Input>
       <button
