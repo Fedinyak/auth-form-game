@@ -1,4 +1,4 @@
-@import "./app.css";
+@import "./components/Container/container.css";
 @import "./components/Cat/cat.css";
 @import "./components/Cube/cube.css";
 @import "./components/Form/form.css";

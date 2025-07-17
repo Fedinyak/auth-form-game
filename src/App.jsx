@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Container from "./components/Container/Container";
 import Cube from "./components/Cube/Cube";
 import Form from "./components/Form/Form";
 import Score from "./components/Score/Score";
@@ -44,28 +45,23 @@ function App() {
   };
 
   return (
-    <>
-      <div className="container">
-        <div className="bg-1"></div>
-        <div className="bg-2"></div>
-        <div className="bg-3"></div>
-        <Score score={score} />
-        <Cube
-          score={score}
-          catPushButton={catPushButton}
-          isLogin={isLogin}
-          isCatPushButton={isCatPushButton}
-          isCatAngry={isCatAngry}
-          playerPushButton={playerPushButton}
-          setIsLogin={setIsLogin}
-          setIsCatPushButton={setIsCatPushButton}
-          catGetScore={catGetScore}
-        >
-          <Form loginHandle={loginHandle} />
-          <LanguageSwitchBtn />
-        </Cube>
-      </div>
-    </>
+    <Container>
+      <Score score={score} />
+      <Cube
+        score={score}
+        catPushButton={catPushButton}
+        isLogin={isLogin}
+        isCatPushButton={isCatPushButton}
+        isCatAngry={isCatAngry}
+        playerPushButton={playerPushButton}
+        setIsLogin={setIsLogin}
+        setIsCatPushButton={setIsCatPushButton}
+        catGetScore={catGetScore}
+      >
+        <Form loginHandle={loginHandle} />
+        <LanguageSwitchBtn />
+      </Cube>
+    </Container>
   );
 }
 
