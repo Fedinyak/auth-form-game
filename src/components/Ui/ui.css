@@ -22,14 +22,12 @@
   background-image: linear-gradient(
     var(--cube-color-dark) 2%,
     var(--cube-color-light) 8% 92%,
-    var(--cube-color-dark) 98% /* var(--white) 98% */
+    var(--cube-color-dark) 98%
   );
 }
 
 .button-language:hover .button-text,
 .active .button-text {
-  /* text-shadow: 0px 2px 20px rgba(255, 255, 255, 0.8); */
-  /* text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.5); */
   text-shadow: 0px 1px 1px var(--text-shadow);
   transition: text-shadow 0.1s ease-out;
 }

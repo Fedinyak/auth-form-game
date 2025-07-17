@@ -1,6 +1,4 @@
 .score-container {
-  /* position: relative; */
-  /* font-family: Martian Mono; */
   margin-top: 0;
   margin-bottom: 13em;
   line-height: 14em;
@@ -38,7 +36,6 @@
 
 @keyframes roll {
   0% {
-    /* transform: translateY(-100px); */
     transform-origin: center top;
     transform: perspective(75em) rotateX(90deg);
   }

@@ -1,71 +1,3 @@
-/* :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-} */
 @import "./app.css";
 @import "./components/Cat/cat.css";
 @import "./components/Cube/cube.css";
@@ -99,7 +31,6 @@ html {
   line-height: 1.5;
   font-weight: 400;
 
-  /* background-color: #242424; */
   min-height: 100%;
   -webkit-text-size-adjust: 100%;
   font-synthesis: none;
@@ -110,24 +41,15 @@ html {
   --background-color: oklch(70.96% 0.13524 288.809);
   --text-color: oklch(0.3316 0.00176 106.8);
   --text-shadow: oklch(1 0 0 / 50%);
-  /* --text-color-dark: oklch(0.4532 0 0); */
-  /* --cube-color: oklch(0.9 0.00434 15.935); */
   --cube-color-dark: oklch(0.7921 0 0);
-  /* --cube-color-dark: oklch(0.7921 0 0) 0.11turn; */
   --cube-color-light: oklch(90.374% 0.00434 15.935);
-  /* --cube-color-light: oklch(0.9491 0 0) 0.31turn 0.36turn; */
   --cap-color-light: oklch(0.7621 0.0069 17.31);
   --cap-color-dark: oklch(0.5736 0.0012 17.19);
-  /* --button-regular: oklch(0.9 0 146); */
-  /* --button-hover: oklch(0.87 0 146); */
-  /* --button-active: oklch(0.84 0 146); */
-  /* --button-focus: oklch(81.439% 0.17934 154.046); */
   --transparent: oklch(1 0 0 / 0%);
   --black-transparent-20: oklch(0% 0 0 / 0.2);
   --black-transparent-30: oklch(0% 0 0 / 0.3);
   --black-transparent-40: oklch(0% 0 0 / 0.4);
 
-  /* --grey-dark: oklch(0.4732 0.00176 106.8); */
   --grey-dark: oklch(0.8 0.00176 106.8);
   --white: oklch(1 0 0);
   --pink: oklch(0.749 0.1605 338.96);
@@ -164,43 +86,26 @@ select {
 button {
   box-sizing: border-box;
   border-radius: 0;
-  /* border: 1px solid var(--black-transparent-20); */
   box-shadow: inset 0 0 1px 1px var(--black-transparent-20);
-  /* color: rgb(124, 122, 122); */
-  /* text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.5); */
-  /* shadow: 0px 2px 3px rgba(0, 0, 0, 0.5); */
-  /* box-shadow: inset 0 1px 1px 1px var(--black-transparent-20); */
-  /* background-clip: text; */
-  /* outline-offset: -1px; */
   border: none;
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 700;
-  /* width: 12em; */
   font-family: inherit;
-  /* background-color: var(--button-regular); */
   cursor: pointer;
   transition: 0.1s linear;
   -webkit-appearance: button;
 }
+
 button:hover:enabled {
-  /* outline: 5px solid #fb0; */
   box-shadow: inset 0 1px 2px 2px var(--black-transparent-40);
   transition: 0.1s linear;
   box-sizing: border-box;
-  /* border: 1px solid var(--black-transparent-20); */
-  /* border-radius: 0; */
-  /* border: 1px solid var(--black-transparent-20); */
-  /* outline-offset: -3px; */
-  /* background-color: var(--button-hover); */
 }
+
 button:active:enabled {
   transition: 0.1s linear;
   box-sizing: border-box;
-  /* border: 1px solid var(--black-transparent-20); */
-  /* border-radius: 0; */
-  /* border: 4px solid var(--black-transparent-20); */
-  /* outline-offset: -3px; */
   background-image: linear-gradient(
     var(--grey-dark) 2%,
     var(--cube-color-light) 8% 92%,
@@ -209,12 +114,11 @@ button:active:enabled {
   box-shadow: inset 0 1px 2px 3px var(--black-transparent-40);
   background-color: var(--button-active);
 }
+
 button:focus:enabled,
 button:focus-visible:enabled,
 input:focus,
 input:focus-visible {
-  /* border: 4px auto var(--black-transparent-20); */
-  /* box-shadow: inset 0 1px 2px 2px var(--black-transparent-20); */
   outline: var(--blue) solid 3px;
 }
 
@@ -248,35 +152,10 @@ label {
   position: relative;
   color: transparent;
   letter-spacing: 0.1em;
-  /* background-color: #3a3939; */
   background-color: var(--text-color);
   text-transform: uppercase;
-  /* text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.5); */
   text-shadow: 0px 2px 3px var(--text-shadow);
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
-  /* transition: text-shadow 0.3s ease-out; */
-}
-
-/* a,
-input,
-button,
-select {
-  &:focus {
-    outline: var(--accent) solid 3px;
-  }
-
-  &:not(:focus-visible):focus {
-    outline: none;
-  }
-} */
-
-#error {
-  width: 100%;
-  font-size: 80%;
-  color: white;
-  background-color: #900;
-  border-radius: 0 0 5px 5px;
-  box-sizing: border-box;
 }

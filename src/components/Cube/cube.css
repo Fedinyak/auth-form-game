@@ -1,6 +1,5 @@
 .cube {
   text-align: center;
-  /* max-width: 1280px; */
   width: 400px;
   margin: 0 auto;
   margin-bottom: 1000px;
@@ -9,8 +8,6 @@
 
 .cube-perspective {
   perspective: 1000px;
-  /* margin-left: -200px; */
-  /* margin-left: -50%; */
   perspective-origin: center;
   transform: translate3d(0, 0, 0);
   transition: transform 0.7s ease 0s, perspective 0.7s ease 0s;
@@ -18,16 +15,12 @@
 
 .flip .cube-perspective {
   perspective: 1500px;
-  /* transform: translate3d(0, 400px, 0); */
   transform: translate3d(0, 320px, 0);
 }
 
 .cube-preserve-3d {
   position: relative;
-  /* padding-bottom: 1000px; */
   transform-style: preserve-3d;
-  /* margin-bottom: 1000px; */
-  /* perspective-origin: top; */
   transition: transform 0.7s ease 0s;
   transform: rotateX(0deg);
 }
@@ -38,22 +31,9 @@
 
 .cube-front-side {
   position: absolute;
+  width: 400px;
+  height: 400px;
 
-  /* background-color: var(--cube-color);
-  background-image: conic-gradient(
-    from -0.125turn,
-    #bbb 0.25turn,
-    #eee 0.25turn 0.5turn,
-    #bbb 0.5turn 0.75turn,
-    #eee 0.75turn
-  ); */
-  /* background-image: conic-gradient(
-    from 0.38turn,
-    #bbb 0.11turn,
-    #eee 0.31turn 0.36turn,
-    #bbb 1turn 0.57turn,
-    #eee 0.86turn
-  ); */
   background-image: conic-gradient(
     from 0.38turn,
     var(--cube-color-dark) 0.11turn,
@@ -62,21 +42,15 @@
     var(--cube-color-light) 0.86turn
   );
   background-size: 2% 2%;
-  width: 400px;
-  height: 400px;
   transition: transform 1s ease 0s;
   transform: rotateX(0deg) translateZ(200px);
-  /* opacity: 0.6; */
   opacity: 1;
-
-  /* backface-visibility: hidden; */
 }
 
 .cube-bottom-side {
   position: absolute;
   width: 400px;
   height: 400px;
-  /* background-color: var(--cube-color); */
   background-image: conic-gradient(
     from 0.38turn,
     var(--cube-color-dark) 0.11turn,
@@ -84,14 +58,9 @@
     var(--cube-color-dark) 1turn 0.57turn,
     var(--cube-color-light) 0.86turn
   );
-  /* margin: 2em 3em; */
   background-size: 2% 2%;
-  /* filter: drop-shadow(0.5em 2em 1.5em oklch(0% 0 0 / 0.3)); */
-  /* box-shadow: 0px 10px 20px 5px rgba(16, 16, 16, 0.704); */
-  /* inset 0px 10px 20px 5px rgba(16, 16, 16, 0.468); */
   transition: transform 0.5s ease 0s;
   transform: rotateX(-90deg) translateZ(200px);
-  /* opacity: 0.6; */
   opacity: 1;
 }
 
@@ -109,14 +78,7 @@
   );
 }
 
-.button-logout {
-  /* display: block; */
-  /* margin-top: 3rem; */
-}
-
 .button-logout-active {
-  /* transition: 0.1s linear; */
-  /* background-color: var(--button-active); */
   background-image: linear-gradient(
     var(--grey-dark) 2%,
     var(--cube-color-dark) 8% 92%,
