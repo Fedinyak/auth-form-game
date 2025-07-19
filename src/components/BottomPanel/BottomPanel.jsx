@@ -6,7 +6,6 @@ const BottomPanel = ({ isShowloader, errorMessage }) => {
   return (
     <div className="bottom-panel">
       <div className="preloader-wrap">
-        {/* <Preloader /> */}
         <span>{isShowloader && <Preloader />}</span>
       </div>
       <ErrorDisplay errorMessage={errorMessage} />

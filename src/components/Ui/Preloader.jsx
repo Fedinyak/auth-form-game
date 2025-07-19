@@ -3,16 +3,6 @@ import { useEffect, useState } from "react";
 const Preloader = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   // const preloaderElements = ["|", "/", "—", "\\"];
-  // const preloaderElements = [
-  //   "(    ",
-  //   " ¯   ",
-  //   "  \\  ",
-  //   "   _ ",
-  //   "    )",
-  //   "   ¯ ",
-  //   "  /  ",
-  //   " _   ",
-  // ];
   const space = "\u00A0";
   const preloaderElements = [
     `(${space + space + space + space}`,
@@ -24,9 +14,8 @@ const Preloader = () => {
     `${space + space}/${space + space}`,
     `${space}_${space + space + space}`,
   ];
-  // (\) (/) (_/¯)
+
   const getPreloaderElement = (index, elements) => {
-    console.log(elements.length, "elements.length");
     if (index === elements.length - 1) {
       setCurrentIndex(0);
     } else {

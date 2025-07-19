@@ -57,11 +57,10 @@ const Form = ({
     }
     if (!isFieldEmpty(email) && !isFieldEmpty(password)) {
       console.log("form submitted");
-
       // const values = { email, password };
       //  setAuthFailed(false);
       showPreloader();
-      // timeout for fake preload )
+      // timeout for fake preload
       setTimeout(() => {
         try {
           setEmailError("");

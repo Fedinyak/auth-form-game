@@ -13,10 +13,4 @@
 
 .preloader-wrap {
   width: 100px;
-  height: 100%;
-  /* background-image: linear-gradient(
-    var(--white) 2%,
-    var(--cube-color-light) 8% 92%,
-    var(--cube-color-dark) 98%
-  ); */
 }
