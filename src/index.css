@@ -4,6 +4,8 @@
 @import "./components/Form/form.css";
 @import "./components/Score/score.css";
 @import "./components/Ui/ui.css";
+@import "./components/Ui/preloader.css";
+@import "./components/BottomPanel/bottom-panel.css";
 
 @font-face {
   font-family: Martian Mono;

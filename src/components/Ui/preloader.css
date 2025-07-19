@@ -1,0 +1,16 @@
+.preloader-container {
+  position: relative;
+  color: var(--grey-dark);
+}
+
+.preloader-animation {
+  position: absolute;
+  left: 0;
+  right: 0;
+
+  color: var(--text-color);
+}
+
+.preloader-letter-shift {
+  margin-left: -0.7rem;
+}

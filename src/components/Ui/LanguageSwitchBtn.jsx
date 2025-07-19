@@ -20,7 +20,8 @@ const LanguageSwitchBtn = () => {
   });
 
   return (
-    <div className="language-button-container">
+    // <div className="language-button-container">
+    <div>
       <button
         className={buttonClassEn}
         onClick={() => handleChange("en")}

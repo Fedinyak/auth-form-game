@@ -2,14 +2,22 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import Input from "./Input";
 import ErrorMessage from "./ErrorMessage";
+import Preloader from "../Ui/Preloader";
+// import axios from "axios";
 
-const Form = ({ loginHandle }) => {
+const Form = ({
+  loginHandle,
+  showPreloader,
+  hiddenPreloader,
+  setErrorMessage,
+}) => {
   const [email, setEmail] = useState("");
   const [emailError, setEmailError] = useState("");
   const [password, setPassword] = useState("");
   const [passwordError, setPasswordError] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isPasswordShow, setIsPasswordShow] = useState(false);
+  // const [isShowloader, setIsShowLoader] = useState(false);
 
   const { t } = useTranslation();
 
@@ -32,9 +40,10 @@ const Form = ({ loginHandle }) => {
     }
   };
 
-  const handleSubmit = e => {
+  const handleSubmit = async e => {
     e.preventDefault();
     setIsSubmitting(true);
+    console.log(e, email, password, "e, email, password, handleSubmit");
 
     if (isFieldEmpty(email)) {
       setEmailError(t("form.errorRequired"));
@@ -48,15 +57,39 @@ const Form = ({ loginHandle }) => {
     }
     if (!isFieldEmpty(email) && !isFieldEmpty(password)) {
       console.log("form submitted");
-      setEmailError("");
-      setPasswordError("");
-      setIsSubmitting(true);
+
+      // const values = { email, password };
+      //  setAuthFailed(false);
+      showPreloader();
+      // timeout for fake preload )
       setTimeout(() => {
-        setIsSubmitting(false);
-      }, 2000);
-      loginHandle();
+        try {
+          setEmailError("");
+          setPasswordError("");
+          setIsSubmitting(true);
+          setTimeout(() => {
+            setIsSubmitting(false);
+          }, 2000);
+          loginHandle();
+          // const response = await axios.post("NONEXISTENT-ENDPOINT_API", values);
+          // localStorage.setItem("userId", JSON.stringify(response.data));
+        } catch (error) {
+          console.error(error);
+          // showError(e)
+          // setErrorMessage(error);
+          setIsSubmitting(false);
+          if (error.isAxiosError || error.response.status === 409) {
+            console.log(error.response.status, "error.response.status");
+            // setAuthFailed(true);
+            setErrorMessage(error.response.status);
+            return;
+          }
+          throw error;
+        } finally {
+          hiddenPreloader();
+        }
+      }, 1000);
     }
-    // console.log('Form submitted:', formData);
   };
 
   const handleEmailChange = e => {
@@ -136,8 +169,10 @@ const Form = ({ loginHandle }) => {
         type="submit"
         disabled={emailError || passwordError || isSubmitting}
       >
+        {/* <span>{isShowloader && <Preloader />}</span> */}
         <span className="button-text">{t("form.buttonLogin")}</span>
       </button>
+      {/* <Preloader /> */}
     </form>
   );
 };
