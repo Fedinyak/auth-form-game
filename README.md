@@ -14,3 +14,5 @@ make install
 ```sh
 make start
 ```
+
+https://fedinyak.github.io/auth-form-game/
