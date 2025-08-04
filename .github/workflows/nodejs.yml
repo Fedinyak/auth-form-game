@@ -9,7 +9,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [16.x]
+        node-version: [22.x]
 
     steps:
       - uses: actions/checkout@v4
@@ -30,4 +30,4 @@ jobs:
       - name: npm install
         run: make install
       - name: run linter
-        run: npx eslint
+        run: make lint
