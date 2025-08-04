@@ -31,5 +31,5 @@ jobs:
         run: make install
       - name: run linter
         run: make lint
-        run: make build
-        run: make deploy
+      - run: make build
+      - run: make deploy
