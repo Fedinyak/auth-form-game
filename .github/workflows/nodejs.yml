@@ -27,5 +27,7 @@ jobs:
       # - name: Run test
       #   run: |
       #     make test
-      - run: ls -la
-      - run: make install
+      - name: npm install
+        run: make install
+      - name: run linter
+        run: make lint
