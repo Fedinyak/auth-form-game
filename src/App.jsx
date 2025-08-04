@@ -3,7 +3,6 @@ import Container from "./components/Container/Container";
 import Cube from "./components/Cube/Cube";
 import Form from "./components/Form/Form";
 import Score from "./components/Score/Score";
-import LanguageSwitchBtn from "./components/Ui/LanguageSwitchBtn";
 import BottomPanel from "./components/BottomPanel/BottomPanel";
 
 function App() {
@@ -75,7 +74,6 @@ function App() {
           hiddenPreloader={hiddenPreloader}
           setErrorMessage={setErrorMessage}
         />
-        {/* <LanguageSwitchBtn /> */}
         <BottomPanel errorMessage={errorMessage} isShowloader={isShowloader} />
       </Cube>
     </Container>
