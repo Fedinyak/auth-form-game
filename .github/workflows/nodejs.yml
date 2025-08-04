@@ -30,4 +30,4 @@ jobs:
       - name: npm install
         run: make install
       - name: run linter
-        run: make lint
+        run: npx eslint
