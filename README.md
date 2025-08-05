@@ -17,4 +17,4 @@ make start
 
 https://fedinyak.github.io/auth-form-game/
 
-<img width="646" alt="cat" src="/src/assets/cat.png">
+<img width="300" alt="cat" src="/src/assets/cat.png">
