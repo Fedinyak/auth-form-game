@@ -15,6 +15,8 @@ make install
 make start
 ```
 
+## GitHub Pages
+
 https://fedinyak.github.io/auth-form-game/
 
 <img width="300" alt="cat" src="/src/assets/cat.png">
