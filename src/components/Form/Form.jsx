@@ -2,7 +2,6 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import Input from "./Input";
 import ErrorMessage from "./ErrorMessage";
-import Preloader from "../Ui/Preloader";
 // import axios from "axios";
 
 const Form = ({
@@ -17,7 +16,6 @@ const Form = ({
   const [passwordError, setPasswordError] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isPasswordShow, setIsPasswordShow] = useState(false);
-  // const [isShowloader, setIsShowLoader] = useState(false);
 
   const { t } = useTranslation();
 
@@ -168,10 +166,8 @@ const Form = ({
         type="submit"
         disabled={emailError || passwordError || isSubmitting}
       >
-        {/* <span>{isShowloader && <Preloader />}</span> */}
         <span className="button-text">{t("form.buttonLogin")}</span>
       </button>
-      {/* <Preloader /> */}
     </form>
   );
 };

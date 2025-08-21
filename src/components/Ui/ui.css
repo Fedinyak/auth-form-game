@@ -1,14 +1,19 @@
 .language-button-container {
   display: flex;
   justify-content: flex-end;
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     var(--white) 2%,
     var(--cube-color-light) 8% 92%,
     var(--cube-color-dark) 98%
-  );
+  ); */
+  padding: 0;
+  /* height: 38px; */
+  border: none;
+  height: 42px;
+  margin: 0;
 }
 
-.button-language {
+/* .button-language {
   padding-left: 0.75em;
   padding-right: 0.75em;
   background-image: linear-gradient(
@@ -16,20 +21,95 @@
     var(--cube-color-light) 8% 92%,
     var(--cube-color-dark) 98%
   );
-}
+} */
 
-.active {
+/* .active {
   background-image: linear-gradient(
     var(--cube-color-dark) 2%,
     var(--cube-color-light) 8% 92%,
     var(--cube-color-dark) 98%
   );
+  background-clip: unset;
+} */
+
+.button-language {
+  appearance: none;
+  cursor: pointer;
+  position: relative;
+  /* width: 100%; */
+  width: 47px;
+  height: 100%;
+  margin: 0;
+  /* padding-left: 0.75em; */
+  /* padding-right: 0.75em; */
+
+  /* background: #c56fff; */
+  background-image: linear-gradient(
+    var(--white) 2%,
+    var(--cube-color-light) 8% 92%,
+    var(--cube-color-dark) 98%
+  );
+  /* box-shadow: none; */
+  box-shadow: inset 0 0 1px 1px var(--black-transparent-20);
+  /* box-shadow: inset 0 0 5px rgb(0 0 0 / 0.2); */
+  border-radius: 10px;
+  /* border: 1px solid #ffffff; */
+  border-radius: 0;
+  transition: 500ms;
 }
 
-.button-language:hover .button-text,
+.button-language::after {
+  /* content: "\2714"; */
+  content: "";
+  position: absolute;
+  background-image: linear-gradient(
+    var(--cube-color-dark) 2%,
+    var(--cube-color-light) 8% 92%,
+    var(--cube-color-dark) 98%
+  );
+  box-shadow: inset 0 0 1px 1px var(--black-transparent-20);
+  background-clip: unset;
+  /* background-color: aqua; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  font-size: 26px;
+  /* transition: 500ms; */
+  overflow: hidden;
+}
+
+.button-language:checked::after {
+  width: 100%;
+  height: 100%;
+  /* transition: 500ms; */
+}
+
+.button-language:checked,
+.button-language:checked::after {
+  outline: none;
+  cursor: default;
+}
+
+.activeBtnLang {
+  text-shadow: 0px 1px 1px var(--text-shadow);
+  transition: text-shadow 0.1s ease-out;
+  pointer-events: none;
+}
+
+/* .button-language:hover .button-text,
+.button-language:hover .button-text-radio,
 .active .button-text {
   text-shadow: 0px 1px 1px var(--text-shadow);
   transition: text-shadow 0.1s ease-out;
+} */
+
+.button-text-radio {
+  position: absolute;
+  left: 11px;
+  top: 9px;
+  cursor: pointer;
+  font-weight: 700;
 }
 
 .error-display {
